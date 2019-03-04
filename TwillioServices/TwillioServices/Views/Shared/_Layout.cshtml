@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .selectWrapper {
+            border-radius: 10px;
+            display: inline-block;
+            overflow: hidden;
+            border: 1px solid #cccccc;
+        }
+        .dropdown {
+            height: 30px;
+            width: 110px;
+            margin: 1px 1px 1px 1px;
+            border: 0px;
+            outline: none;
+        }
+
+      
+    </style>
+   
+ 
+    <!--
+
+
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        var app = angular.module('main', []);
+        app.controller('DemoCtrl', function ($scope,$http) {
+            $http.get('http://localhost:53083/api/DietPlan/GetAllData').
+                success(function (data) {
+                    $scope.items = data;
+                    console.log('succsess - ' + $scope.items);
+                })
+                .error(function () {
+                    $scope.items = "error in fetching data";
+                    console.log('error - ' + $scope.items);
+
+                });
+
+
+            //$scope.chooseCountries = [
+            //    { countryId: 1, name: "France - Mainland", desc: "some description" },
+            //    { countryId: 2, name: "Gibraltar", desc: "some description" },
+            //    { countryId: 3, name: "Malta", desc: "some description" }
+            //];
+
+            $scope.selectedItem = $scope.items[0].id;
+        });
+    </script>
+    -->
+    <style>
+        #myProgress {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        #myBar {
+            width: 10%;
+            height: 30px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Diet Planner", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Planner</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

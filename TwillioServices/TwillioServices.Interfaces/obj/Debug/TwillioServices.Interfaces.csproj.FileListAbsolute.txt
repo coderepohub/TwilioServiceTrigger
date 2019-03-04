@@ -1,0 +1,5 @@
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Interfaces\bin\Debug\TwillioServices.Interfaces.dll
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Interfaces\bin\Debug\TwillioServices.Interfaces.pdb
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Interfaces\obj\Debug\TwillioServices.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Interfaces\obj\Debug\TwillioServices.Interfaces.dll
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Interfaces\obj\Debug\TwillioServices.Interfaces.pdb

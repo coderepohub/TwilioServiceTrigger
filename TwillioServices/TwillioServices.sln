@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwillioServices", "TwillioServices\TwillioServices.csproj", "{C000352C-3E73-4214-B625-C51EC663F1F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwillioServices.TwillioLogics", "TwillioServices.TwillioLogics\TwillioServices.TwillioLogics.csproj", "{F1B9F04D-1C5D-40AC-A30F-034485F505A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwillioServices.Interfaces", "TwillioServices.Interfaces\TwillioServices.Interfaces.csproj", "{6AA66132-F4C9-45F1-9A71-6A45E48BE003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwillioServices.DocumentDbRepo", "TwillioServices.DocumentDbRepo\TwillioServices.DocumentDbRepo.csproj", "{254CF3F4-0C52-47A2-AAD4-07612C2421E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwillioServices.Logics", "TwillioServices.Logics\TwillioServices.Logics.csproj", "{65B69B82-414D-49B3-BF32-C85088CCF672}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C000352C-3E73-4214-B625-C51EC663F1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C000352C-3E73-4214-B625-C51EC663F1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C000352C-3E73-4214-B625-C51EC663F1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C000352C-3E73-4214-B625-C51EC663F1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B9F04D-1C5D-40AC-A30F-034485F505A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B9F04D-1C5D-40AC-A30F-034485F505A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B9F04D-1C5D-40AC-A30F-034485F505A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B9F04D-1C5D-40AC-A30F-034485F505A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA66132-F4C9-45F1-9A71-6A45E48BE003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA66132-F4C9-45F1-9A71-6A45E48BE003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA66132-F4C9-45F1-9A71-6A45E48BE003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA66132-F4C9-45F1-9A71-6A45E48BE003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{254CF3F4-0C52-47A2-AAD4-07612C2421E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254CF3F4-0C52-47A2-AAD4-07612C2421E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{254CF3F4-0C52-47A2-AAD4-07612C2421E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254CF3F4-0C52-47A2-AAD4-07612C2421E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65B69B82-414D-49B3-BF32-C85088CCF672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B69B82-414D-49B3-BF32-C85088CCF672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B69B82-414D-49B3-BF32-C85088CCF672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B69B82-414D-49B3-BF32-C85088CCF672}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B95F17F6-5980-426D-9146-CAAD118B75AD}
+	EndGlobalSection
+EndGlobal

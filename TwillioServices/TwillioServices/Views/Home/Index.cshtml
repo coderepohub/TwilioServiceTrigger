@@ -1,0 +1,122 @@
+﻿<!--
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+    -->
+<div class="row jumbotron">
+    <div class="col-md-4">
+        <p>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-calendar" style="font-size: 1.5em;"></i></span>
+                    <span class="selectWrapper"> @Html.DropDownList("daysdropDown", ViewData["listOfDays"] as List<SelectListItem>, "-SELECT-", new { @class = "dropdown" })</span>
+</div>
+        </p>
+        <p>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-time"  style="font-size: 1.5em;"></i></span>
+                <span class="selectWrapper"> @Html.DropDownList("hoursDropDown", ViewData["listOfHours"] as List<SelectListItem>, "-SELECT-", new { @class = "dropdown" })</span>
+            </div>
+        </p>
+
+
+
+        <!-- <span>DAYS : @Html.DropDownList("daysdropDown", ViewData["listOfDays"] as List<SelectListItem>, "-SELECT-")</span>
+        </p>
+        <p>
+            <span>HOURS : @Html.DropDownList("hoursDropDown", ViewData["listOfHours"] as List<SelectListItem>,"-SELECT-")</span>
+        </p>
+               -->
+        <p>
+
+            <input type="text" class="form-control" id="planField">
+        </p>
+        <p>
+            <button onclick="upsert()" class="btn btn-primary">Update | Insert</button>
+        </p>
+        <p>
+            <span id="responseMsg" />
+        </p>
+
+        <!--
+        <div ng-controller="DemoCtrl" ng-app="main">
+            <select ng-model="selectedItem" ng-options="item.id as item.id for item in items">
+                <option value="">Select Slot</option>
+            </select>
+        </div>
+           -->
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+
+
+
+
+
+    document.getElementById("planField").readOnly = true;
+    function upsert() {
+        document.getElementById("planField").readOnly = true;
+        //http://localhost:53083/
+        //https://zoeplan.azurewebsites.net
+        var url = "https://zoeplan.azurewebsites.net/api/DietPlan/UpdatePlan";
+        var updatedPlan = $("#planField").val();
+        var hh = $("#hoursDropDown Option:Selected").text();
+        var day = $("#daysdropDown Option:Selected").text();
+        if (hh === "-SELECT-" || day === "-SELECT-") {
+            document.getElementById("responseMsg").textContent = "Please Select Values from the dropdown";
+            return;
+        }
+        var id = day + "-" + hh;
+        var updatedObject = { "id": id, "plan": updatedPlan };
+        $.post(url, updatedObject, function (data) {
+            document.getElementById("responseMsg").textContent = "Successfull";
+
+        })
+    };
+
+    $(document).ready(function () {
+
+        $("#hoursDropDown").change(function () {
+
+            //  var url = ""
+            document.getElementById("responseMsg").textContent = "";
+            var hh = $("#hoursDropDown Option:Selected").text();
+            var day = $("#daysdropDown Option:Selected").text();
+            if (hh === "-SELECT-" || day === "-SELECT-") {
+                document.getElementById("responseMsg").textContent = "Please Select Values from the dropdown";
+            }
+            else {
+                // alert('hh -- ' + hh + ' : day -- ' + day);
+                var id = day + "-" + hh;
+                var url = "https://zoeplan.azurewebsites.net/api/DietPlan/GetPlan?id=" + id;
+                $.get(url, function (data) {
+                    if (data != null) {
+                        var a = data.plan;
+                        $("#planField").val(a);
+                    }
+                    else {
+                        var a = "";
+                        $("#planField").val(a);
+                        }
+                    document.getElementById("planField").readOnly = false;
+
+                }).fail(function () {
+                    var a = "";
+                    $("#planField").val(a);
+                    document.getElementById("planField").readOnly = false;
+                    });
+            }
+
+        })
+        $("#daysdropDown").change(function () {
+            document.getElementById("responseMsg").textContent = "";
+            // var empty = "";
+            document.getElementById("planField").readOnly = true;
+            //  $("#planField").val(empty);
+        })
+
+    })
+</script>

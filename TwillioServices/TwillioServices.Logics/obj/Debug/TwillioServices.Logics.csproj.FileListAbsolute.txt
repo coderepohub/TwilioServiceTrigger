@@ -1,0 +1,9 @@
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\bin\Debug\TwillioServices.Logics.dll
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\bin\Debug\TwillioServices.Logics.pdb
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\bin\Debug\TwillioServices.Interfaces.dll
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\bin\Debug\TwillioServices.Interfaces.pdb
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\obj\Debug\TwillioServices.Logics.csprojAssemblyReference.cache
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\obj\Debug\TwillioServices.Logics.csproj.CoreCompileInputs.cache
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\obj\Debug\TwillioServices.Logics.csproj.CopyComplete
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\obj\Debug\TwillioServices.Logics.dll
+C:\Users\H346363\source\repos\TwillioServices\TwillioServices.Logics\obj\Debug\TwillioServices.Logics.pdb
